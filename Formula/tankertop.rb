@@ -5,21 +5,21 @@
 class Tankertop < Formula
   desc "btop-style terminal dashboard for Kubernetes and Docker, monitorable over SSH with no install."
   homepage "https://github.com/tankertop/tankertop"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tankertop/tankertop/releases/download/v0.1.2/tankertop_0.1.2_darwin_amd64.tar.gz"
-      sha256 "f833e9fcdfefccc6c3685f4157d86a296465a896b1f15a9276ca8dae13b13b5a"
+      url "https://github.com/tankertop/tankertop/releases/download/v0.1.3/tankertop_0.1.3_darwin_amd64.tar.gz"
+      sha256 "fd19dd7e5aca032973f2dc9c24bb086a68f1cb4e423bb00847324ee37d573763"
 
       define_method(:install) do
         bin.install "tankertop"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tankertop/tankertop/releases/download/v0.1.2/tankertop_0.1.2_darwin_arm64.tar.gz"
-      sha256 "60de6ca60f2bbcb62d4b959e956e6effded3a1de017a078beb38adf5630f6fde"
+      url "https://github.com/tankertop/tankertop/releases/download/v0.1.3/tankertop_0.1.3_darwin_arm64.tar.gz"
+      sha256 "852917cfd61f5c20623699dd8e9fe814edc93d12e4a1239320f77de0aea1c052"
 
       define_method(:install) do
         bin.install "tankertop"
@@ -29,15 +29,15 @@ class Tankertop < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tankertop/tankertop/releases/download/v0.1.2/tankertop_0.1.2_linux_amd64.tar.gz"
-      sha256 "ddcc2ac6ae232ab62fed7aa23c8f15090afc8a1addf9a56846001665978d33d9"
+      url "https://github.com/tankertop/tankertop/releases/download/v0.1.3/tankertop_0.1.3_linux_amd64.tar.gz"
+      sha256 "8714d28b59816607ab0104c1d72d029c4867ee010c1352c9810636f2a3349baf"
       define_method(:install) do
         bin.install "tankertop"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tankertop/tankertop/releases/download/v0.1.2/tankertop_0.1.2_linux_arm64.tar.gz"
-      sha256 "92444a719330d7b369cddd4fbb74918069d3860075f3407a1ca842b284474366"
+      url "https://github.com/tankertop/tankertop/releases/download/v0.1.3/tankertop_0.1.3_linux_arm64.tar.gz"
+      sha256 "8b7bb07772d3c9d1c50729ac4f64dab5783e5e601d9fb4d9ab9620914747e05c"
       define_method(:install) do
         bin.install "tankertop"
       end
